@@ -1,0 +1,77 @@
+:root{
+  --paper:#eef3f6; --card:#ffffff; --ink:#12202b; --muted:#4a5b68;
+  --lens:#1f5fbf; --lens-dark:#16468c; --sun:#f2b705; --line:#c9d6de;
+  --head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--body);font-size:1.125rem;line-height:1.6;color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+a{color:var(--lens-dark)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:28px}
+section{padding:80px 0}
+p{max-width:65ch;margin:0 0 1em}
+
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--head);font-weight:800;color:#fff;text-decoration:none;font-size:1.2rem}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{color:#dbe6ee;text-decoration:none;font-weight:600}
+nav a:hover{color:var(--sun)}
+.menu-btn{display:none;background:none;border:2px solid #dbe6ee;color:#fff;border-radius:6px;padding:6px 12px;font:inherit;cursor:pointer}
+
+.hero{padding:88px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:800;letter-spacing:-.02em}
+.hero .role{font-family:var(--head);font-size:1.4rem;margin:18px 0 12px;color:var(--lens-dark)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--lens)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--sun);border-color:var(--sun)}
+.lenses{position:relative;aspect-ratio:1/1;max-width:360px;justify-self:center;width:100%}
+.lenses img,.lenses .ph{width:100%;height:100%;object-fit:cover;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;border:6px solid var(--ink)}
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:#dbe6ee;color:var(--muted);font-size:1rem}
+
+.about{background:var(--card);border-block:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.skills h3{font-size:1.2rem;margin:0 0 10px}
+.skills ul{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-wrap:wrap;gap:8px}
+.skills li{padding:5px 14px;border-radius:99px;border:2px solid var(--ink);font-weight:600;font-size:1rem}
+.skills .strong li{background:var(--ink);color:#fff}
+.skills .learning li{border-color:var(--lens);color:var(--lens-dark)}
+.skills .beginner li{border-style:dashed;border-color:var(--muted);color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
+.project{background:var(--card);border:2px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.project .shot{aspect-ratio:16/10;border-bottom:2px solid var(--ink);object-fit:cover;width:100%}
+.project .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.project h3{font-size:1.4rem}
+.project p{margin:0;font-size:1rem}
+.project .label{font-weight:600;color:var(--lens-dark)}
+.project .links{margin-top:auto;padding-top:8px;font-weight:600}
+
+.contact{background:var(--ink);color:#fff}
+.contact a{color:var(--sun)}
+.contact .big{font-family:var(--head);font-size:clamp(1.4rem,4vw,2.4rem);word-break:break-word}
+footer{background:#0b141b;color:#9fb1bd;text-align:center;padding:20px 0;font-size:.95rem}
+
+@media (max-width:760px){
+  .menu-btn{display:block}
+  nav{position:absolute;top:64px;left:0;right:0;background:var(--ink);display:none;border-top:1px solid #2c3f4d}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px 24px 16px}
+  nav a{display:block;padding:12px 0}
+  .hero{padding:48px 0}
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .lenses{max-width:240px;order:-1;justify-self:start}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+#projects{background:var(--card);border-block:1px solid var(--line)}
